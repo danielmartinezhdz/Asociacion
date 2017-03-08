@@ -1,0 +1,14 @@
+<h1>Perfiles</h1>
+
+<%=form_for(@users_profile) do |f|%>
+
+<%= f.label "Usuario"%>
+<select>
+<%= options_for_select([["dan",1],["man",2]],2)%>
+</select>
+<%end%>
+
+
+<% render 'form', users_profile: @users_profile %>
+
+<%= link_to 'Back', users_profiles_path %>
